@@ -21,6 +21,7 @@ top: 317.79px;
 }
 
 .submit-button-wrapper {
+	display: block;
     color:white;
   	background: black;
   	text-decoration: none;

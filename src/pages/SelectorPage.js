@@ -1,5 +1,6 @@
 import React from 'react';
 import TagButton from '../components/TagButton';
+import './SelectorPage.css';
 
 /**
  *  Edit the tagList in constructor to change what each button says
@@ -41,7 +42,7 @@ class SelectorPage extends React.Component {
             this.selectedTags.push(value);
         } else {
             this.selectedTags = this.selectedTags.filter( (arrayValue) => {
-                return arrayValue != value;
+                return arrayValue !== value;
             })
         }
     }
