@@ -10,32 +10,49 @@ class SelectorPage extends React.Component {
     constructor(props) {
         super(props);
         this.tagList = [
-            "Sample_1",
-            "Sample_2",
-            "Sample_3",
-            "Sample_4",
-            "Sample_5",
-            "Sample_6",
-            "Sample_7",
-            "Sample_8",
-            "Sample_9",
-            "Sample_10",
-            "Sample_11",
-            "Sample_12",
-            "Sample_13",
-            "Sample_14",
-            "Sample_15"
+            "Free Food",
+            "Holiday Event",
+            "Healthy Lifestyle",
+            "Music Festival",
+            "Art and Film Festival",
+            "Food Fair",
+            "Community Service",
+            "Social Justice",
+            "Speaking Engagements",
+            "Career Fair",
+            "Fun Games",
+            "Brand Events"
         ]
         this.selectedTags = [];
+        this.state = {
+            noSelectionMsgShow: false
+        };
     }
 
-    tagButtonClickedHandler = (value) => {
-        this.selectedTags.push(value);
-        console.log(this.selectedTags);
+    displayNoSelectionMsg = () => {
+        if (this.state.noSelectionMsgShow)
+            return <span>No selections made!</span>
+    }
+
+    tagButtonClickedHandler = (state, value) => {
+        //if it just became active, push it.
+        //Otherwise, find value and delete from array.
+        if (state === "inactive") {
+            this.selectedTags.push(value);
+        } else {
+            this.selectedTags = this.selectedTags.filter( (arrayValue) => {
+                return arrayValue != value;
+            })
+        }
     }
 
     submitButtonClickedHandler = () => {
-
+        if (Array.isArray(this.selectedTags) && this.selectedTags.length === 0)
+            this.setState({
+                noSelectionMsgShow: true
+            })
+        else
+            this.props.action(this.selectedTags);
     }
 
     getButtons = () => {
@@ -50,22 +67,15 @@ class SelectorPage extends React.Component {
     }
 
     render() {
-        // fetch('http://api.giphy.com/v1/gifs/search?api_key=TB0ogTreDooNVCAA5nYZtfoGoR8WIqt6&q=test&limit=5')
-        //     .then((response) => {
-        //         return response.json();
-        //     })
-        //     .then((myJson) => {
-        //         console.log(myJson.data[0].images.downsized.url);
-        //     })
-
         return <div className="selector-page">
             <h1>Pick your favorite events!</h1>
             <div className="tag-buttons-wrapper">
                 {this.getButtons()}
             </div>
             <div className="submit-button-wrapper">
-                <button className="submit-button">Give Me Recommendation ►</button>
+                <button className="submit-button" onClick={(e) => {this.submitButtonClickedHandler()}}>Give Me Recommendation ►</button>
             </div>
+            {this.displayNoSelectionMsg()}
 
         </div>
     }

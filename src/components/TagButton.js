@@ -20,7 +20,7 @@ class TagButton extends React.Component {
         return <button className={"tag-button " + activeClassName} onClick={
             (e) => {
                 this.handleClick();
-                this.props.action(this.props.value);
+                this.props.action(activeClassName, this.props.value);
             }
             }>
             {this.props.value}
