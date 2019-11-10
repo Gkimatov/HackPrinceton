@@ -34,7 +34,7 @@ class ResultItem extends React.Component {
 
     render() {
         return <Swipeable
-            onSwipeUp={
+            onSwipeUp= {
                 (e) => {
                     this.props.swipeUp();
                 }
@@ -56,6 +56,12 @@ class ResultItem extends React.Component {
                 <div className="description">{this.props.object.desc}</div>
                 <span className="datetime">{this.processDateTime()}</span>
                 <img src={this.props.object.img} />
+                <button className="share-button">
+                    {/* <img src=""/> */}
+                </button>
+                <button className="link-button">
+                    {/* <img src=""/> */}
+                </button>
             </div>
         </Swipeable>
     }
