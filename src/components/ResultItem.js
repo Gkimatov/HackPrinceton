@@ -57,13 +57,14 @@ class ResultItem extends React.Component {
                 <div className="host">@{this.props.object.host}</div>
                 <div className="description">{this.props.object.desc}</div>
                 <span className="datetime">{this.processDateTime()}</span>
-                <img src={this.props.object.img} />
-                <button className="share-button">
-                    <img src={share}/> 
-                </button>
-                <button className="link-button">
-                    <img src={join}/> 
-                </button>
+                <img className="feature-img" src={this.props.object.img} />
+                
+                    <a href="google.com">
+                    <img src={share} className="share-button"/> 
+                    </a>
+                    <a href="{this.prop.object.link}">
+                    <img src={join} className="link-button"/> 
+                    </a>
             </div>
         </Swipeable>
     }
