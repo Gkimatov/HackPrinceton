@@ -4,6 +4,8 @@ import {
     Swipeable,
     Draggable
 } from 'react-touch';
+import join from '../img/join.png';
+import share from '../img/share.png';
 
 // title={element.title}
 // desc={element.desc}
@@ -57,10 +59,10 @@ class ResultItem extends React.Component {
                 <span className="datetime">{this.processDateTime()}</span>
                 <img src={this.props.object.img} />
                 <button className="share-button">
-                    {/* <img src=""/> */}
+                    <img src={share}/> 
                 </button>
                 <button className="link-button">
-                    {/* <img src=""/> */}
+                    <img src={join}/> 
                 </button>
             </div>
         </Swipeable>
