@@ -1,6 +1,14 @@
 .no-more-results {
-    top: 50%;
+    top: 45%;
     width: 100%;
     text-align:center;
     position:fixed;
+    color: white;
+}
+
+.results-page {
+    position:fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #3b3b47;
 }

@@ -3,7 +3,9 @@ import './App.css';
 
 import SelectorPage from './pages/SelectorPage';
 import ResultsPage from './pages/ResultsPage';
-import ResultItem from './components/ResultItem';
+import LandingPage from './pages/Landing';
+import menu from './img/menu.png';
+import Menu from './components/Menu';
 
 
 class App extends React.Component {
@@ -11,7 +13,17 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      becomeResultPage: false
+      becomeResultPage: false,
+      becomeLikesPage: false,
+      showSelection: false,
+      showMenu: false
+    }
+
+    this.default = {
+      becomeResultPage: false,
+      becomeLikesPage: false,
+      showSelection: false,
+      showMenu: false
     }
 
     //Convert this to persistence if we have time
@@ -50,21 +62,77 @@ class App extends React.Component {
       }
     ]
 
-    this.setState( {
-      becomeResultPage: true
+    this.setState({
+      becomeResultPage: true,
+      showSelection: false,
+      showMenu: false
     })
+  }
 
-    
+  showMenu() {
+    if (this.state.showMenu)
+      return <Menu
+        selectionAction={
+          (e) => {
+            this.setState({
+              showSelection: !this.state.showSelection
+            });
+          }
+        }
+        likesAction={
+          (e) => {
+            this.setState({
+              showSelection: !this.state.showSelection
+            });
+          }
+        }
+      />
+  }
 
+  showSelection() {
+    if (this.state.showSelection) {
+      return <SelectorPage action={this.handleSubmit} />;
+    }
   }
 
 
   render() {
+    let processedPage;
+
     if (this.state.becomeResultPage) {
-      return <ResultsPage results={this.jsonResults}/>
+      processedPage = <ResultsPage results={this.jsonResults} />
     } else {
-      return <SelectorPage action={this.handleSubmit}/>
+      processedPage = <LandingPage action={(e) => {
+        this.setState({
+          showSelection: !this.state.showSelection
+        })
+      }} />
     }
+
+    //<SelectorPage action={this.handleSubmit} />
+
+    return <div>
+      <div className="header">
+        <h2 onClick={
+          (e) => {
+            this.setState(this.default);
+          }
+        }>Evento</h2>
+        <img src={menu} onClick={
+          (e) => {
+            this.setState(
+              {
+                showMenu: !this.state.showMenu
+              });
+          }
+        } />
+        {this.showMenu()}
+        {this.showSelection()}
+
+      </div>
+      {processedPage}
+    </div>
+
   }
 
 }

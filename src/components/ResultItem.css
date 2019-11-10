@@ -2,7 +2,7 @@
 	position: fixed;
 	width: 100%;
 	height: 100%;
-	transform: translateX(-50%);
+	background-color: #3b3b47;
 }
 
 /* h1 */
@@ -12,7 +12,7 @@
 	position: fixed;
 	width: 289px;
 	height: 115px;
-	left: 143px;
+	left: 20px;
 	top: 563px;
 	font-family: Helvetica Neue, Arial;
 	font-style: normal;
@@ -31,8 +31,8 @@
 	width: 289px;
 	height: 75px;
 	text-align: left;
-	left: 223px;
-	top: 563px;
+	left: 20px;
+	top: 75%;
 	font-family: Helvetica Neue, Arial;
 	font-style: normal;
 	font-weight: 500;
@@ -44,7 +44,9 @@
 
 /* div */
 
-.result-item .description {}
+.result-item .description {
+	display:none;
+}
 
 .result-item .feature-img {
 	height: 100%;
@@ -59,8 +61,8 @@
 	width: 289px;
 	height: 75px;
 	text-align: left;
-	left: 229px;
-	top: 653px;
+	left: 20px;
+	top: 85%;
 	font-family: Helvetica Neue, Arial;
 	font-style: normal;
 	font-weight: 500;
@@ -78,8 +80,7 @@
 	background-color: transparent;
 	opacity: 0.9;
 	
-left: 350%;
-top:4px;
+	top:4px;
 
 }
 
@@ -92,13 +93,12 @@ top:4px;
 	opacity: 0.9;
 
 	top: 50px;
-	left: 350%;
 
 }
 
 .social-buttons-wrapper {
 	position: fixed;
 	background-color: transparent;
-	left: 100%;
-	top: 75%;
+	top: 72%;
+	right: 5%;
 }
