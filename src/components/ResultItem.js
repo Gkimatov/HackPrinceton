@@ -36,35 +36,37 @@ class ResultItem extends React.Component {
 
     render() {
         return <Swipeable
-            onSwipeUp= {
+            onSwipeUp={
                 (e) => {
                     this.props.swipeUp();
                 }
             }
-            onSwipeLeft = {
+            onSwipeLeft={
                 (e) => {
                     this.props.swipeLeft();
                 }
             }
-            onSwipeRight = {
+            onSwipeRight={
                 (e) => {
                     this.props.swipeRight();
                 }
             }
-            >
+        >
             <div className="result-item">
                 <h1 className="title">{this.props.object.title}</h1>
                 <div className="host">@{this.props.object.host}</div>
                 <div className="description">{this.props.object.desc}</div>
                 <span className="datetime">{this.processDateTime()}</span>
                 <img className="feature-img" src={this.props.object.img} />
-                
-                    <a href="google.com">
-                    <img src={share} className="share-button"/> 
-                    </a>
-                    <a href="{this.prop.object.link}">
-                    <img src={join} className="link-button"/> 
-                    </a>
+
+                <div className="custom-sharing-button">
+                    <img src={share} />
+                </div>
+
+                <div className="link-button">
+                    <img src={join} />
+                </div>
+
             </div>
         </Swipeable>
     }
