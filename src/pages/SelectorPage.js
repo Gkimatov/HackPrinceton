@@ -32,7 +32,7 @@ class SelectorPage extends React.Component {
 
     displayNoSelectionMsg = () => {
         if (this.state.noSelectionMsgShow)
-            return <span>No selections made!</span>
+            return <span className="error-msg">No selections made!</span>
     }
 
     tagButtonClickedHandler = (state, value) => {

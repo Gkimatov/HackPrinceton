@@ -20,7 +20,7 @@
   left: 205.85px;
   top: 242.82px;
 
-  font-family: Helvetica Neue;
+  font-family: Helvetica Neue, Arial;
   font-style: normal;
   font-weight: 300;
   font-size: 80%;
@@ -56,7 +56,7 @@ h1{
   top: 100px;
   text-align: center;
 
-  font-family: Helvetica Neue;
+  font-family: Helvetica Neue, Arial;
   font-style: normal;
   font-weight: 500;
   font-size: 90%;
@@ -64,4 +64,21 @@ h1{
 
   color: #474747;
 
+}
+
+.error-msg {
+
+  position: fixed;
+  right: 0;
+  padding-top: 21%;
+  width: 280px;
+
+
+  font-family: Helvetica Neue, Arial;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 80%;
+  line-height: 30px;
+
+  color: #474747;
 }
