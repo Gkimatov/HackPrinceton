@@ -59,12 +59,18 @@ class ResultItem extends React.Component {
                 <span className="datetime">{this.processDateTime()}</span>
                 <img className="feature-img" src={this.props.object.img} />
 
-                <div className="custom-sharing-button">
-                    <img src={share} />
-                </div>
+                <div className="social-buttons-wrapper">
+                    <div className="custom-sharing-button">
+                        <a href="http://google.com">
+                            <img src={share} />
+                        </a>
+                    </div>
 
-                <div className="link-button">
-                    <img src={join} />
+                    <div className="link-button">
+                        <a href="http://google.com">
+                            <img src={join} />
+                        </a>
+                    </div>
                 </div>
 
             </div>
