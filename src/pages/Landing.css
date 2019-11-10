@@ -31,13 +31,14 @@
 }
 
 .landing-page button {
-    background-color: black;
-    color: white;
-    padding: 7px 14px;
+    background-color: #FFF3E5;
+    color: #474747;;
+    padding: 10px 14px;
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
     border: none;
-    font-size: 22px;
+    font-size: 20px;
     position:relative;
     top: 150px;
+    font-weight: bold;
 }
