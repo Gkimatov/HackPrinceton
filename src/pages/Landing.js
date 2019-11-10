@@ -18,7 +18,7 @@ class Landing extends React.Component {
                     this.props.action();
                 }
             }>
-            Select your interest!
+            Select your interests!
             </button>
             </div>
         </div>

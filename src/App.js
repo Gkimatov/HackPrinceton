@@ -6,6 +6,7 @@ import ResultsPage from './pages/ResultsPage';
 import LandingPage from './pages/Landing';
 import menu from './img/menu.png';
 import Menu from './components/Menu';
+import logo from './img/logo.png';
 
 
 class App extends React.Component {
@@ -113,12 +114,14 @@ class App extends React.Component {
 
     return <div>
       <div className="header">
-        <h2 onClick={
+        <div class="title" onClick={
           (e) => {
             this.setState(this.default);
           }
-        }>Evento</h2>
-        <img src={menu} onClick={
+        }>
+          <img className="logo" src={logo}/>
+          <h2>Evento</h2></div>
+        <img className="hamburger" src={menu} onClick={
           (e) => {
             this.setState(
               {
