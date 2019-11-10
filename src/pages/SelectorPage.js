@@ -19,7 +19,7 @@ class SelectorPage extends React.Component {
             "Food Fair",
             "Community Service",
             "Social Justice",
-            "Speaking Engagements",
+            "Speech", //Speaking Engagements
             "Career Fair",
             "Fun Games",
             "Brand Events"
