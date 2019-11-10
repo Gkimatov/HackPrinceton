@@ -37,9 +37,9 @@ class ResultsPage extends React.Component {
         this.swipeHandler();
     }
 
-    swipeRightHandler = () => {
+    swipeRightHandler = (obj) => {
         this.swipeHandler();
-        
+        this.props.action(obj);
     }
 
     //Made to consider situation when currentIndex = length
