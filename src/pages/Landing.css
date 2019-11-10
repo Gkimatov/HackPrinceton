@@ -27,18 +27,19 @@
 
 .landing-page .landing-img {
     width: 100%;
-    opacity: 0.2;
+    opacity: 0.4;
 }
 
 .landing-page button {
     background-color: #FFF3E5;
-    color: #474747;;
-    padding: 10px 14px;
+    color: #474747;
+    padding: 13px 14px;
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
     border: none;
-    font-size: 20px;
+    font-size: 14px;
+    font-family: Helvetica Neue, arial;
     position:relative;
-    top: 150px;
+    top: 170px;
     font-weight: bold;
 }

@@ -10,11 +10,12 @@
 
 .header .title {
   position: absolute;
-  top: 10px;
+  top: 14px;
   left: 10px;
-  color: #474747;
+  color: #656565;
+  font-size: 70%;
   background-color: #FFF3E5;
-  padding: 10px 12px;
+  padding: 6px 12px;
   border-top-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
@@ -23,7 +24,7 @@
   margin: 0;
   display: inline;
   position: relative;
-  top: -5px;
+  top: -9px;
   padding-left: 8px;
 }
 
@@ -35,11 +36,12 @@
 .header .hamburger {
   width: 38px;
   position: relative;
-  top: 10px;
+  top: 14px;
+
   float: right;
   right: 10px;
   background-color: #FFF3E5;
-  padding: 5px;
-  border-radius: 5px;
+  padding: 3px;
+  border-radius: 3px;
 }
 
