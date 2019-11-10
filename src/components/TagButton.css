@@ -1,11 +1,36 @@
 .tag-button {
+background-color: transparent;
+position: 300px 100px 100px 100px;
+width: 40%;
+height: 35.01px;
+left: 205.85px;
+top: 242.82px;
+
+font-family: Helvetica Neue;
+font-style: normal;
+font-weight: 300;
+font-size: 80%;
+line-height: 30px;
+margin-left: 4%;
+margin-right: 4%;
+margin-top: 20px;
+margin-bottom: 0.1%;
+/* identical to box height */
+
+
+border: 1px solid #474747;
+box-sizing: border-box;
+border-radius: 20px;
+
 
 }
 
-.tag-button .inactive {
 
+.inactive {
+	background-color: transparent;
 }
 
-.tag-button .active {
-    
+.active {
+	background-color: #F7BF71;
+
 }
